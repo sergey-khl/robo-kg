@@ -6,6 +6,6 @@
 
 ## NOTES
 
-- a quick test has been run to see if DINO-ViT works between real and sim that you can see: [here](./media/corr.png)
+- a quick test has been run to see if DINO-ViT works between real and sim that you can see: ![image](./media/corr.png)
 
 
