@@ -1,0 +1,4 @@
+[submodule "IsaacSim-ros_workspaces"]
+	path = IsaacSim-ros_workspaces
+	url = git@github.com:sergey-khl/IsaacSim-ros_workspaces.git
+	branch = main
