@@ -28,6 +28,15 @@ def get_vec_for_query(df, query):
 
     return vecs
 
+def get_vecs_for_task(df, skills):
+    filtered_skills = [skill for skill in skills if skill != "<HOME>"]
+    skills_to_find_uris_for = [
+        word 
+        for skill in filtered_skills 
+        for word in skill.split("_")
+    ]
+    uris = [standardized_uri('en', skill) for skill in skills_to_find_uris_for]
+    return [df.loc[uri].values for uri in uris if uri in df.index]
 
 def main():
     query = "prepare me a fruit salad"
@@ -45,16 +54,7 @@ def main():
     query_vecs = get_vec_for_query(df, query)
     tasks_vecs = {}
     for task, skills in tasks.items():
-        filtered_skills = [skill for skill in skills if skill != "<HOME>"]
-        skills_to_find_uris_for = [
-            word 
-            for skill in filtered_skills 
-            for word in skill.split("_")
-        ]
-        uris = [standardized_uri('en', skill) for skill in skills_to_find_uris_for]
-
-        tasks_vecs[task] = [df.loc[uri].values for uri in uris if uri in df.index]
-
+        tasks_vecs[task] = get_vecs_for_task(df, skills)
 
 
 if __name__ == "__main__":
