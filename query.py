@@ -3,7 +3,7 @@ from text_to_uri import standardized_uri
 import numpy as np
 
 
-def get_vec_for_query(df, query):
+def get_vecs_and_count_for_query(df, query):
     vecs = []
 
     query = query.split()
@@ -28,7 +28,7 @@ def get_vec_for_query(df, query):
             prev_match = None
             prev_idx = curr_idx
 
-    return vecs
+    return vecs, len(vecs)
 
 def get_vecs_and_count_for_task(df, skills):
     filtered_skills = [skill for skill in skills if skill != "<HOME>"]
@@ -55,7 +55,7 @@ def find_task_similarity(query_vecs, task_vecs, normalizer):
 
 # NOTE: we are always working with normalized embeddings so dot product is always cos sim
 def main():
-    # query = "prepare me a fruit salad"
+    query = "prepare me a fruit salad"
     # query = "lighting never strikes twice"
     # query = "make me fruit, robot!"
 
@@ -69,12 +69,12 @@ def main():
     whitelist_english = df.index.str.startswith('/c/en') # for our use case we only care about english
     df = df[whitelist_english]
 
-    query_vecs = get_vec_for_query(df, query)
+    query_vecs, query_count = get_vecs_and_count_for_query(df, query)
     task_sim = {}
     for task, skills in tasks.items():
-        vecs, count = get_vecs_and_count_for_task(df, skills) 
+        task_vecs, task_count = get_vecs_and_count_for_task(df, skills) 
 
-        sim = find_task_similarity(query_vecs, vecs, count*len(query.split()))
+        sim = find_task_similarity(query_vecs, task_vecs, query_count*task_count)
 
         task_sim[task] = sim
 
