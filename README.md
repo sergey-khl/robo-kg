@@ -1,9 +1,3 @@
-## TODO:
-
-1. update kinova template on lab github
-2. create nested setup of kinova code, dinovit and nvidia scripts for n4j  
-
-
 ## NOTES
 
 - a quick test has been run to see if DINO-ViT works between real and sim that you can see: ![image](./media/corr.png)
@@ -17,6 +11,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mnt/krabby-patty-vault/MyApps/isaacsim/
 - then you can ```./python.sh standalone_examples/api/isaacsim.ros2.bridge/moveit.py``` to bring up a default panda environment. You should get no errors
 and this is useful for seeing if your setup works. I will be adding more interesting environmets in this repo later on.
 
+- Run ```wget http://conceptnet.s3.amazonaws.com/precomputed-data/2016/numberbatch/19.08/mini.h5``` where this README is located so that you have access to commonsense knowledge graph embeddings. This is from the
+conceptnet numberbatch [project](https://github.com/commonsense/conceptnet-numberbatch?tab=readme-ov-file)
+- install requirements.txt with your prefered method. I am using python 3.10.19 if you want to ensure your results are consistent with mine. 
 
 
 

@@ -1,0 +1,4 @@
+wordfreq==3.1.1
+pandas==2.0.3
+numpy==1.22.4
+tables==3.8.0
