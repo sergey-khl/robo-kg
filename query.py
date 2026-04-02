@@ -60,13 +60,19 @@ def main():
     # query = "make me fruit, robot!"
 
 
-    # these are the behaviour tree which represent full tasks
+    # these are the behaviour trees which represent full tasks
     tasks = {
-            "stash_fruit": ["robot_pickup_kiwi", "<HOME>", "item_drop_box", "<HOME>", "robot_pickup_strawberry", "<HOME>", "item_drop_box"]
+            "making_a_fruit_salad": ["robot_pickup_kiwi", "<HOME>", "item_drop_box", "<HOME>", "robot_pickup_strawberry", "<HOME>", "item_drop_box"],
+            "do_dishes": ["robot_pickup_cup", "<HOME>", "cup_place_dishwasher"],
+            "detonate_building": ["push_button"],
+            "start_car": ["push_button"],
+            "dust_the_furniture": ["robot_pickup_duster", "<HOME>", "duster_clean_photo", "<HOME>", "duster_clean_countertop", "<HOME>", "robot_putaway_duster"],
+            "🍞_🎥": ["🤖_pickup_🎥", "<HOME>", "🎥_capture_🍞", "<HOME>", "🤖_putaway_🎥"],
             }
 
     df = pd.read_hdf('mini.h5')
     whitelist_english = df.index.str.startswith('/c/en') # for our use case we only care about english
+    whitelist_emojis = df.index.str.startswith('/c/mul') # and emojis
     df = df[whitelist_english]
 
     query_vecs, query_count = get_vecs_and_count_for_query(df, query)
