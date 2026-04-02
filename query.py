@@ -1,7 +1,6 @@
 import pandas as pd
 from text_to_uri import standardized_uri
 import numpy as np
-import os
 
 # this does fancy window slider which we use for our query and task name
 def window_parse(df, words):
@@ -61,9 +60,6 @@ def find_task_similarity(query_vecs, task_vecs, normalizer):
 # NOTE: we are always working with normalized embeddings so dot product is always cos sim
 def main():
     query = "prepare me a fruit salad"
-    # query = "lighting never strikes twice"
-    # query = "make me fruit, robot!"
-
 
     # these are the behaviour trees which represent full tasks
     tasks = {
@@ -73,6 +69,10 @@ def main():
             "start car": ["push_button"],
             "dust the furniture": ["robot_pickup_duster", "<HOME>", "duster_clean_photo", "<HOME>", "duster_clean_countertop", "<HOME>", "robot_putaway_duster"],
             "film bread": ["robot_pickup_camera", "<HOME>", "camera_capture_bread", "<HOME>", "robot_putaway_camera"],
+            "water plant": ["robot_pickup_bottle", "<HOME>", "bottle_pour_plant", "<HOME>", "robot_putaway_bottle"],
+            "knee surgery": ["robot_pickup_scalpel", "<HOME>", "scalpel_cut_knee", "<HOME>", "robot_putaway_scalpel", "<HOME>", "robot_fix_knee"],
+            "start fire": ["robot_pickup_wood", "<HOME>", "wood_place_camp", "<HOME>", "robot_pickup_kindling", "<HOME>", "robot_place_camp", "<HOME>", "robot_pickup_lighter", "<HOME>", "ligher_light_kindling"],
+            "fix pants": ["robot_pickup_needle", "<HOME>", "needle_sow_pants"],
             }
 
     df = pd.read_hdf('mini.h5')
