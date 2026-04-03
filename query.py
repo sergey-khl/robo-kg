@@ -1,6 +1,7 @@
 import pandas as pd
 from text_to_uri import standardized_uri
 import numpy as np
+from sklearn.metrics import accuracy_score, f1_score
 
 # this does fancy window slider which we use for our query and task name
 def window_parse(df, words):
@@ -27,6 +28,10 @@ def window_parse(df, words):
             vecs.append(normalized_vec)
             prev_match = None
             prev_idx = curr_idx
+        else:
+            # skip word if not in kg
+            curr_idx += 1
+            prev_idx = curr_idx
 
     return vecs, len(vecs)
 
@@ -49,6 +54,7 @@ def regular_parse(df, skills):
     return normalized_vecs, len(vecs)
 
 
+# NOTE: we are always working with normalized embeddings so dot product is always cos sim
 def find_task_similarity(query_vecs, task_vecs, normalizer):
     sim = 0
     for qvec in query_vecs:
@@ -57,10 +63,7 @@ def find_task_similarity(query_vecs, task_vecs, normalizer):
 
     return sim / normalizer
 
-# NOTE: we are always working with normalized embeddings so dot product is always cos sim
 def main():
-    query = "prepare me a fruit salad"
-
     # these are the behaviour trees which represent full tasks
     tasks = {
             "making a fruit salad": ["robot_pickup_kiwi", "<HOME>", "item_drop_box", "<HOME>", "robot_pickup_strawberry", "<HOME>", "item_drop_box"],
@@ -79,8 +82,6 @@ def main():
     whitelist_english = df.index.str.startswith('/c/en') # for our use case we only care about english
     df = df[whitelist_english]
 
-    query_vecs, query_count = window_parse(df, query)
-
     task_data = {}
     for title, skills in tasks.items():
         skill_vecs, skill_count = regular_parse(df, skills) 
@@ -94,21 +95,35 @@ def main():
             'vecs': task_vecs,
             'count': task_count
         }
+
+    query_df = pd.read_csv("kg_experiment.csv")
+
+    y_true = []
+    y_pred = []
+
+    for _, row in query_df.iterrows():
+        query = row['query']
+        actual_task = row['task']
+        
+        query_vecs, query_count = window_parse(df, query)
+
+        task_sim = {}
+        for title, data in task_data.items():
+            task_vecs = data['vecs']
+            task_count = data['count']
+
+            sim = find_task_similarity(query_vecs, task_vecs, query_count * task_count)
+            task_sim[title] = sim
+
+        winner = max(task_sim, key=task_sim.get)
+
+        y_pred.append(winner)
+        y_true.append(actual_task)
             
-    task_sim = {}
-    for title, data in task_data.items():
-        task_vecs = data['vecs']
-        task_count = data['count']
 
-        sim = find_task_similarity(query_vecs, task_vecs, query_count*task_count)
-
-        task_sim[title] = sim
-
-    print(task_sim)
-
-    winner = max(task_sim, key=task_sim.get)
-
-    print(f"The winning task is {winner} with a value of {task_sim[winner]}")
+    accuracy = accuracy_score(y_true, y_pred)
+    f1 = f1_score(y_true, y_pred, average="weighted")
+    print(f"acc: {accuracy}, f1: {f1}")
 
 
 if __name__ == "__main__":

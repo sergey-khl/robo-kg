@@ -1,0 +1,21 @@
+Provide me 200 unique queries that should be associated to the following tasks in varying order of difficulty.
+    
+tasks = {
+    "making a fruit salad": ["robot_pickup_kiwi", "<HOME>", "item_drop_box", "<HOME>", "robot_pickup_strawberry", "<HOME>", "item_drop_box"],
+    "do dishes": ["robot_pickup_cup", "<HOME>", "cup_place_dishwasher"],
+    "detonate building": ["push_button"],
+    "start car": ["push_button"],
+    "dust the furniture": ["robot_pickup_duster", "<HOME>", "duster_clean_photo", "<HOME>", "duster_clean_countertop", "<HOME>", "robot_putaway_duster"],
+    "film bread": ["robot_pickup_camera", "<HOME>", "camera_capture_bread", "<HOME>", "robot_putaway_camera"],
+    "water plant": ["robot_pickup_bottle", "<HOME>", "bottle_pour_plant", "<HOME>", "robot_putaway_bottle"],
+    "knee surgery": ["robot_pickup_scalpel", "<HOME>", "scalpel_cut_knee", "<HOME>", "robot_putaway_scalpel", "<HOME>", "robot_fix_knee"],
+    "start fire": ["robot_pickup_wood", "<HOME>", "wood_place_camp", "<HOME>", "robot_pickup_kindling", "<HOME>", "robot_place_camp", "<HOME>", "robot_pickup_lighter", "<HOME>", "ligher_light_kindling"],
+    "fix pants": ["robot_pickup_needle", "<HOME>", "needle_sow_pants"],
+}
+
+An example query could be "prepare me a fruit salad" which would be associated to the "making a fruit salad" task.
+
+The queries should be of roughly equal distribution across the tasks and equal distribution of difficulty.
+
+Provide me the dataset as a csv file containing the query, task it maps to, and difficulty of the query
+

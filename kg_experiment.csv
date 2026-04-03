@@ -1,0 +1,201 @@
+query,task,difficulty
+"Prepare me a fruit salad","making a fruit salad",Easy
+"Make a fruit salad","making a fruit salad",Easy
+"I want a fruit salad","making a fruit salad",Easy
+"Chop some fruit for a salad","making a fruit salad",Easy
+"Can you make fruit salad","making a fruit salad",Easy
+"Create a fruit salad","making a fruit salad",Easy
+"Mix some kiwis and strawberries into a salad","making a fruit salad",Easy
+"Put together a healthy fruit bowl for me","making a fruit salad",Medium
+"I need a sweet and healthy snack using strawberries and kiwi","making a fruit salad",Medium
+"Prepare a fresh berry and kiwi mix","making a fruit salad",Medium
+"Toss some fresh fruits together for breakfast","making a fruit salad",Medium
+"Combine the strawberry and kiwi into a dish","making a fruit salad",Medium
+"I'd love a bowl of mixed chopped fruits","making a fruit salad",Medium
+"Serve up a quick fruit medley","making a fruit salad",Medium
+"My diet requires a plant-based sweet mixture in a bowl right now","making a fruit salad",Hard
+"Execute the culinary protocol for combining chopped sweet produce","making a fruit salad",Hard
+"Construct a refreshing botanical dish using the available berries and kiwi","making a fruit salad",Hard
+"I require a nutritious concoction of sliced vibrant produce","making a fruit salad",Hard
+"Assemble a raw dietary snack utilizing the red and green fruits","making a fruit salad",Hard
+"Synthesize a refreshing dessert from the garden harvests","making a fruit salad",Hard
+"Do the dishes","do dishes",Easy
+"Wash the cups","do dishes",Easy
+"Load the dishwasher","do dishes",Easy
+"Clean the dirty dishes","do dishes",Easy
+"Put the cup in the dishwasher","do dishes",Easy
+"Clean the cups in the sink","do dishes",Easy
+"Wash up the dishes","do dishes",Easy
+"The sink is getting full, can you empty it","do dishes",Medium
+"Please take care of the dirty cups","do dishes",Medium
+"It's time to run the dishwashing machine with the cups","do dishes",Medium
+"Tidy up the kitchen sink area","do dishes",Medium
+"Make sure the drinkware is sanitized","do dishes",Medium
+"Help me clean up after breakfast by loading the machine","do dishes",Medium
+"Stow the used mugs in the cleaning appliance","do dishes",Medium
+"Initiate the ceramic sanitation cycle","do dishes",Hard
+"The vessels for drinking require aqueous purification","do dishes",Hard
+"Restore the kitchen's liquid receptacles to a state of hygiene","do dishes",Hard
+"Execute the automated porcelain cleansing routine","do dishes",Hard
+"Transfer the soiled drinking apparatus to the automated scrubber","do dishes",Hard
+"Banish the grime from our morning beverage containers","do dishes",Hard
+"Detonate the building","detonate building",Easy
+"Blow up the building","detonate building",Easy
+"Push the detonation button","detonate building",Easy
+"Destroy the building","detonate building",Easy
+"Trigger the explosion","detonate building",Easy
+"Demolish the structure","detonate building",Easy
+"Set off the explosives","detonate building",Easy
+"Bring down the old skyscraper","detonate building",Medium
+"Press the button to level the facility","detonate building",Medium
+"Execute the controlled demolition","detonate building",Medium
+"Trigger the charges in the building","detonate building",Medium
+"Initiate the structural collapse sequence","detonate building",Medium
+"It's time to reduce the building to rubble","detonate building",Medium
+"Press the switch to start the demolition","detonate building",Medium
+"Terminate the architectural entity via rapid energetic disassembly","detonate building",Hard
+"Initiate the catastrophic structural negation protocol","detonate building",Hard
+"Convert the towering edifice into a pile of localized debris","detonate building",Hard
+"Depress the actuator to finalize the urban renewal clearing phase","detonate building",Hard
+"Obliterate the designated coordinates containing the obsolete architecture","detonate building",Hard
+"Trigger the rapid exothermic reaction to flatten the facility","detonate building",Hard
+"Start the car","start car",Easy
+"Turn on the car","start car",Easy
+"Start the engine","start car",Easy
+"Push the button to start the car","start car",Easy
+"Fire up the vehicle","start car",Easy
+"Ignite the car engine","start car",Easy
+"Turn the car on","start car",Easy
+"Get the engine running for our trip","start car",Medium
+"Warm up the automobile","start car",Medium
+"Press the ignition for the vehicle","start car",Medium
+"Get the motor running","start car",Medium
+"Ready the transport for departure","start car",Medium
+"Turn the ignition on","start car",Medium
+"Start up the motor vehicle","start car",Medium
+"Engage the internal combustion sequence of the transport module","start car",Hard
+"Breathe life into the mechanical beast in the driveway","start car",Hard
+"Initiate the primary propulsion unit of our four-wheeled conveyance","start car",Hard
+"Depress the activator to awake the automotive powertrain","start car",Hard
+"Supply power to the chassis locomotion system","start car",Hard
+"Trigger the automotive ignition relay protocol","start car",Hard
+"Dust the furniture","dust the furniture",Easy
+"Clean the countertop","dust the furniture",Easy
+"Dust the photos and counters","dust the furniture",Easy
+"Wipe down the furniture","dust the furniture",Easy
+"Clean the dust off the surfaces","dust the furniture",Easy
+"Use the duster on the living room","dust the furniture",Easy
+"Remove the dust from the furniture","dust the furniture",Easy
+"The photo frames and countertops are looking dusty","dust the furniture",Medium
+"Give the surfaces a quick wipe with the duster","dust the furniture",Medium
+"Go around and clear the cobwebs and dust from the tables","dust the furniture",Medium
+"Make sure the picture frames are free of dust","dust the furniture",Medium
+"Freshen up the countertops and photos with the dusting tool","dust the furniture",Medium
+"Tidy the living space by removing surface particles","dust the furniture",Medium
+"Take the duster to the main surfaces in the room","dust the furniture",Medium
+"Eradicate the accumulation of airborne particulates from the horizontal planes","dust the furniture",Hard
+"Execute the static-cling particulate removal protocol on the memorabilia","dust the furniture",Hard
+"Restore the sheen to our planar surfaces and cherished visual artifacts","dust the furniture",Hard
+"Banish the microscopic debris settling upon our domestic topography","dust the furniture",Hard
+"Deploy the feathery implement to sweep away the temporal sediment","dust the furniture",Hard
+"Conduct a thorough particulate sweeping maneuver across the furnishings","dust the furniture",Hard
+"Film the bread","film bread",Easy
+"Record a video of the bread","film bread",Easy
+"Use the camera on the bread","film bread",Easy
+"Shoot a video of the loaf","film bread",Easy
+"Capture footage of the bread","film bread",Easy
+"Record the baked goods","film bread",Easy
+"Film the loaf of bread","film bread",Easy
+"Get some b-roll footage of the sourdough","film bread",Medium
+"Take the camera and document the baking result","film bread",Medium
+"Let's get a nice video shot of that fresh loaf","film bread",Medium
+"Point the lens at the bread and hit record","film bread",Medium
+"I need visual documentation of the baked carbohydrate","film bread",Medium
+"Capture the crusty texture of the loaf on video","film bread",Medium
+"Make a short film featuring the baked dough","film bread",Medium
+"Digitize the visual essence of the yeast-leavened artifact","film bread",Hard
+"Engage the optical sensor to preserve the temporal state of the baked consumable","film bread",Hard
+"Execute cinematography protocols targeting the farinaceous subject","film bread",Hard
+"Capture the light reflecting off the artisanal wheat construct","film bread",Hard
+"Immortalize the crusty baked specimen in high definition moving pictures","film bread",Hard
+"Direct the digital aperture towards the gluten matrix and commence logging","film bread",Hard
+"Water the plant","water plant",Easy
+"Pour water on the plant","water plant",Easy
+"Hydrate the plant","water plant",Easy
+"Give the plant some water","water plant",Easy
+"Water the houseplant","water plant",Easy
+"Use the bottle to water the plant","water plant",Easy
+"Feed the plant some water","water plant",Easy
+"The soil looks dry, can you give the greenery a drink","water plant",Medium
+"Empty the water bottle into the potted plant","water plant",Medium
+"Give the foliage its daily hydration","water plant",Medium
+"The flora needs some moisture from the bottle","water plant",Medium
+"Keep the indoor garden alive by pouring some water","water plant",Medium
+"Provide liquid sustenance to the potted fern","water plant",Medium
+"Refresh the botanical specimen with some H2O","water plant",Medium
+"Alleviate the botanical specimen's drought conditions via liquid administration","water plant",Hard
+"Transfer the aqueous solution from the cylindrical vessel to the potting medium","water plant",Hard
+"Perform the scheduled liquid nutrient delivery to our photosynthetic companion","water plant",Hard
+"Quench the osmotic deficit of the decorative foliage","water plant",Hard
+"Saturate the terra cotta environment to sustain the chloroplast activity","water plant",Hard
+"Initiate the fluid transfer protocol to maintain optimal turgor pressure in the flora","water plant",Hard
+"Perform knee surgery","knee surgery",Easy
+"Fix the knee","knee surgery",Easy
+"Operate on the knee","knee surgery",Easy
+"Do surgery on the knee","knee surgery",Easy
+"Repair the knee with the scalpel","knee surgery",Easy
+"Cut the knee for surgery","knee surgery",Easy
+"Conduct the knee operation","knee surgery",Easy
+"The patient requires a surgical repair of their knee joint","knee surgery",Medium
+"Grab the scalpel and fix the patella issue","knee surgery",Medium
+"Initiate the medical procedure to mend the damaged knee","knee surgery",Medium
+"Time to operate on the lower leg hinge joint","knee surgery",Medium
+"Repair the torn meniscus using the surgical tools","knee surgery",Medium
+"Perform the orthopedic intervention on the knee","knee surgery",Medium
+"Start the surgical protocol for the patient's leg joint","knee surgery",Medium
+"Execute the highly invasive biomechanical restoration of the patellofemoral articulation","knee surgery",Hard
+"Deploy surgical implements to rectify the structural integrity of the synovial hinge","knee surgery",Hard
+"Make the precise dermal incisions required for anterior cruciate ligament reconstruction","knee surgery",Hard
+"Commence the intricate anatomical remediation of the patient's genual region","knee surgery",Hard
+"Utilize the surgical blade to grant access for intra-articular repairs","knee surgery",Hard
+"Undertake the complex operative rectification of the lower limb's central pivot","knee surgery",Hard
+"Start a fire","start fire",Easy
+"Light the campfire","start fire",Easy
+"Build a fire","start fire",Easy
+"Start the campfire with wood","start fire",Easy
+"Light the kindling","start fire",Easy
+"Make a fire","start fire",Easy
+"Ignite the wood","start fire",Easy
+"Gather some wood and kindling to get a blaze going","start fire",Medium
+"We need some heat, light the camp's fire pit","start fire",Medium
+"Use the lighter to ignite the kindling and logs","start fire",Medium
+"Set up the campfire and spark a flame","start fire",Medium
+"Create a warm blaze at the campsite","start fire",Medium
+"Let's get the fire ring roaring with some wood","start fire",Medium
+"Prep the kindling and start the evening fire","start fire",Medium
+"Initiate the exothermic oxidation of the gathered timber and brush","start fire",Hard
+"Construct a combustible pyre and spark a sustained thermal reaction","start fire",Hard
+"Deploy the butane ignition source to catalyze the burning of the cellulose materials","start fire",Hard
+"Assemble the organic fuel matrix and establish a localized inferno","start fire",Hard
+"Trigger the combustion sequence of the arboreal remnants at the bivouac","start fire",Hard
+"Facilitate a self-sustaining campfire via strategic placement of tinder and spark","start fire",Hard
+"Fix the pants","fix pants",Easy
+"Sew the pants","fix pants",Easy
+"Mend the pants","fix pants",Easy
+"Use the needle on the pants","fix pants",Easy
+"Stitch up the pants","fix pants",Easy
+"Repair my trousers","fix pants",Easy
+"Sew the hole in the pants","fix pants",Easy
+"My trousers have a tear, can you stitch them up","fix pants",Medium
+"Take a needle and repair the rip in my slacks","fix pants",Medium
+"The hem on my jeans is undone, please sew it","fix pants",Medium
+"Do some quick tailoring on these damaged pants","fix pants",Medium
+"Mend the fabric on these trousers with a needle","fix pants",Medium
+"Patch up the hole in my legwear","fix pants",Medium
+"Give these torn pants a quick stitch repair","fix pants",Medium
+"Rectify the structural compromise in the dual-legged woven garment","fix pants",Hard
+"Perform textile remediation utilizing the sharp threaded implement","fix pants",Hard
+"Execute a sartorial intervention to restore the integrity of the slacks","fix pants",Hard
+"Bridge the fibrous chasm in the trousers using interlocking sutures","fix pants",Hard
+"Deploy the metallic awl to intertwine fibers and salvage the damaged breeches","fix pants",Hard
+"Conduct a micro-structural fabric repair on the lower-body apparel","fix pants",Hard
