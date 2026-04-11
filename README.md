@@ -1,4 +1,4 @@
-## NOTES
+## Install: DINOBot controller
 
 - a quick test has been run to see if DINO-ViT works between real and sim that you can see: ![image](./media/corr.png)
 - I am using ubuntu 24 with isaac sim locally installed and ros2 jazzy installed in docker following: https://docs.isaacsim.omniverse.nvidia.com/latest/installation/install_ros.html 
@@ -14,6 +14,9 @@ and this is useful for seeing if your setup works. I will be adding more interes
 - Run ```wget http://conceptnet.s3.amazonaws.com/precomputed-data/2016/numberbatch/19.08/mini.h5``` where this README is located so that you have access to commonsense knowledge graph embeddings. This is from the
 conceptnet numberbatch [project](https://github.com/commonsense/conceptnet-numberbatch?tab=readme-ov-file)
 - install requirements.txt with your prefered method. I am using python 3.10.19 if you want to ensure your results are consistent with mine. 
+- the main code resides in [DINOBot implementation][https://github.com/sergey-khl/IsaacSim-ros_workspaces/tree/main/jazzy_ws/src/dino_kg]
+- build the docker image by running the shell script [./build_ros.sh][https://github.com/sergey-khl/IsaacSim-ros_workspaces/blob/main/build_ros.sh]
+- start the docker container with [./start][https://github.com/sergey-khl/robo-kg/blob/main/start.sh]
 
 
 
