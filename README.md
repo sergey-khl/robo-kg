@@ -16,7 +16,7 @@ conceptnet numberbatch [project](https://github.com/commonsense/conceptnet-numbe
 - install requirements.txt with your prefered method. I am using python 3.10.19 if you want to ensure your results are consistent with mine. 
 - the main code resides in [DINOBot implementation][https://github.com/sergey-khl/IsaacSim-ros_workspaces/tree/main/jazzy_ws/src/dino_kg]
 - build the docker image by running the shell script [./build_ros.sh][https://github.com/sergey-khl/IsaacSim-ros_workspaces/blob/main/build_ros.sh]
-- start the docker container with [./start][https://github.com/sergey-khl/robo-kg/blob/main/start.sh]
+- start the docker container with [./start](https://github.com/sergey-khl/robo-kg/blob/main/start.sh)
 
 
 
