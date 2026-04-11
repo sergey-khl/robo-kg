@@ -1,7 +1,7 @@
 import pandas as pd
 from text_to_uri import standardized_uri
 import numpy as np
-from sklearn.metrics import accuracy_score, f1_score
+from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_score
 
 # this does fancy window slider which we use for our query and task name
 def window_parse(df, words):
@@ -68,14 +68,14 @@ def main():
     tasks = {
             "making a fruit salad": ["robot_pickup_kiwi", "<HOME>", "item_drop_box", "<HOME>", "robot_pickup_strawberry", "<HOME>", "item_drop_box"],
             "do dishes": ["robot_pickup_cup", "<HOME>", "cup_place_dishwasher"],
-            "detonate building": ["push_button"],
-            "start car": ["push_button"],
+            "detonate building": ["robot_push_button"],
+            "start car": ["robot_push_button"],
             "dust the furniture": ["robot_pickup_duster", "<HOME>", "duster_clean_photo", "<HOME>", "duster_clean_countertop", "<HOME>", "robot_putaway_duster"],
             "film bread": ["robot_pickup_camera", "<HOME>", "camera_capture_bread", "<HOME>", "robot_putaway_camera"],
             "water plant": ["robot_pickup_bottle", "<HOME>", "bottle_pour_plant", "<HOME>", "robot_putaway_bottle"],
             "knee surgery": ["robot_pickup_scalpel", "<HOME>", "scalpel_cut_knee", "<HOME>", "robot_putaway_scalpel", "<HOME>", "robot_fix_knee"],
             "start fire": ["robot_pickup_wood", "<HOME>", "wood_place_camp", "<HOME>", "robot_pickup_kindling", "<HOME>", "robot_place_camp", "<HOME>", "robot_pickup_lighter", "<HOME>", "ligher_light_kindling"],
-            "fix pants": ["robot_pickup_needle", "<HOME>", "needle_sow_pants"],
+            "fix pants": ["robot_pickup_needle", "<HOME>", "needle_sew_pants"],
             }
 
     df = pd.read_hdf('mini.h5')
@@ -123,8 +123,13 @@ def main():
 
     accuracy = accuracy_score(y_true, y_pred)
     f1 = f1_score(y_true, y_pred, average="weighted")
-    print(f"acc: {accuracy}, f1: {f1}")
-
+    recall = recall_score(y_true, y_pred, average="weighted")
+    precision = precision_score(y_true, y_pred, average="weighted")
+    
+    print(f"acc:  {accuracy:.4f}")
+    print(f"f1:  {f1:.4f}")
+    print(f"rec:    {recall:.4f}")
+    print(f"prec: {precision:.4f}")
 
 if __name__ == "__main__":
     main()
