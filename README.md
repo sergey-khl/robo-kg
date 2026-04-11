@@ -20,7 +20,7 @@ export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mnt/krabby-patty-vault/MyApps/isaacsim/exts/isaacsim.ros2.bridge/jazzy/lib
 ```
 - then you can ```./python.sh standalone_examples/api/isaacsim.ros2.bridge/moveit.py``` to bring up a default panda environment. You should get no errors
-and this is useful for seeing if your setup works. I will be adding more interesting environmets in this repo later on.
+and this is useful for seeing if your setup works.
 
 - the main code resides in [DINOBot implementation](https://github.com/sergey-khl/IsaacSim-ros_workspaces/tree/main/jazzy_ws/src/dino_kg)
 - build the docker image by running the shell script [./build_ros.sh](https://github.com/sergey-khl/IsaacSim-ros_workspaces/blob/main/build_ros.sh)
